@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crossing Borders: A Hidden Journey</title>
+    <title>Crossing Borders: Lena's (Not-So) Hidden Journey</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -28,19 +28,31 @@
             margin: 20px 0;
             font-size: 18px;
         }
+        #progress-container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #f3f3f3;
+            border-radius: 5px;
+        }
+        #progress-bar {
+            width: 0%;
+            height: 20px;
+            background-color: #4caf50;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
 
-    <h1>Crossing Borders: A Hidden Journey</h1>
-    <p>Using simulated Fitbit location data combined with women's health tracking to tell a story.</p>
+    <h1>Crossing Borders: Lena's (Not-So) Hidden Journey</h1>
+    <p>In today's world, wristbands are more than just a fashion statement. They're exceptionally complex tiny computers tasked with recording our health data for monitoring our well-being and fitness levels. However, these cool features come at the cost of privacy. With enterprises, brokers, and even governments willing to pay a pretty penny for the data our wristbands collect, individuals are increasingly vulnerable to surveillance and the potential misuse of their personal information.</p>
     
     <div>
         <iframe id="map" src="journey_map.html"></iframe>
     </div>
     
     <div id="description">
-        <p id="map-description">This map shows the journey of an 18-year-old woman traveling from Indiana to Illinois, indicating the menstrual phases and timestamps.</p>
+        <p id="map-description">This map shows the journey of an 18-year-old woman.</p>
     </div>
 
     <div class="button-container">
@@ -48,22 +60,42 @@
         <button class="nav-button" onclick="nextMap()">Next</button>
     </div>
 
+    <div id="progress-container">
+        <div id="progress-bar"></div>
+    </div>
+    <p id="date-display"></p>
+
     <script>
         const totalMaps = 5; // Update this to the number of maps you have
         let currentMap = 0;
 
         const descriptions = [
-            "Phase: Menstrual<br>Date: 2024-01-01<br>The journey begins in Indiana. She's experiencing her menstrual cycle.",
-            "Phase: Follicular<br>Date: 2024-01-10<br>The woman is feeling hopeful as she moves forward in her cycle.",
-            "Phase: Ovulatory<br>Date: 2024-01-15<br>In Illinois now, she may be considering her options with this phase of her cycle.",
-            "Phase: Luteal<br>Date: 2024-01-20<br>Continuing to navigate her journey, emotions may be heightened as she faces uncertainty.",
-            "Phase: Missed Period<br>Date: 2024-01-25<br>Indicating that she has missed her period for the last couple of months."
+            "Fitbit Phase: Menstrual<br>Timestamp: 15 November 2023 14:00:00<br>Period lasted 4 days. <br>The journey begins in Indiana at a high school.",
+            "Fitbit Phase: Missed Period<br>Timestamp: 17 December 2023 16:00:00<br>Missed Period this month. <br>She is at her home suburb, having missed her period.",
+            "Fitbit Phase: Missed Period<br>Timestamp: 16 January 2024 17:00:00<br>Missed Period Again this month. <br>At a hospital in Indiana, she has missed her period again.",
+            "Fitbit Phase: Missed Period<br>Timestamp: 24 January 2024 19:00:00<br>Has missed her period for the last two months straight. <br>Traveling on the highway between Indiana and Illinois.",
+            "Likely Seeking Abortion<br>Timestamp: 25 January 2024 09:00:00<br>Arrived at a hospital in Illinois, likely seeking an abortion."
         ];
 
         function updateMap() {
             const iframe = document.getElementById('map');
-            iframe.src = `journey_map.html`;
+            const locations = [
+                "journey_map_1.html", // URL for the first map
+                "journey_map_2.html", // URL for the second map
+                "journey_map_3.html", // URL for the third map
+                "journey_map_4.html", // URL for the fourth map
+                "journey_map_5.html"  // URL for the fifth map
+            ];
+            iframe.src = locations[currentMap]; // Set the URL for the current map
             document.getElementById('map-description').innerHTML = descriptions[currentMap];
+
+            // Update progress bar
+            const progressBar = document.getElementById('progress-bar');
+            const percentage = ((currentMap + 1) / totalMaps) * 100;
+            progressBar.style.width = percentage + '%';
+
+            // Update date display
+            document.getElementById('date-display').innerHTML = descriptions[currentMap].match(/Date: (.+?)<br>/)[1];
         }
 
         function nextMap() {
@@ -83,4 +115,3 @@
 
 </body>
 </html>
-
