@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_c85625ca8bd87106b2c20fdf734d9da5 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_c85625ca8bd87106b2c20fdf734d9da5" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_c85625ca8bd87106b2c20fdf734d9da5 = L.map(
+                "map_c85625ca8bd87106b2c20fdf734d9da5",
+                {
+                    center: [39.7684, -86.1581],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_49a3f1e0985bd2202acd64e68d7e1a24 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_c85625ca8bd87106b2c20fdf734d9da5);
+        
+    
+            var marker_ba846d08d25da83a7baeb69660c01c67 = L.marker(
+                [39.7684, -86.1581],
+                {}
+            ).addTo(map_c85625ca8bd87106b2c20fdf734d9da5);
+        
+    
+        var popup_b304545c2ba47afbb2eab1ba663bcae6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_baee2dd00526d140a0da7b231785adb8 = $(`<div id="html_baee2dd00526d140a0da7b231785adb8" style="width: 100.0%; height: 100.0%;">Location A<br>Phase: Menstrual<br>Date: 2024-01-01</div>`)[0];
+                popup_b304545c2ba47afbb2eab1ba663bcae6.setContent(html_baee2dd00526d140a0da7b231785adb8);
+            
+        
+
+        marker_ba846d08d25da83a7baeb69660c01c67.bindPopup(popup_b304545c2ba47afbb2eab1ba663bcae6)
+        ;
+
+        
+    
+    
+            var marker_7854def97a6412c262896127371cf85e = L.marker(
+                [39.7392, -104.9903],
+                {}
+            ).addTo(map_c85625ca8bd87106b2c20fdf734d9da5);
+        
+    
+        var popup_e1f3cd4206d28a8895e99965c2964b36 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5f03d17a6dba7d5422504d611ba716c1 = $(`<div id="html_5f03d17a6dba7d5422504d611ba716c1" style="width: 100.0%; height: 100.0%;">Location B<br>Phase: Follicular<br>Date: 2024-01-10</div>`)[0];
+                popup_e1f3cd4206d28a8895e99965c2964b36.setContent(html_5f03d17a6dba7d5422504d611ba716c1);
+            
+        
+
+        marker_7854def97a6412c262896127371cf85e.bindPopup(popup_e1f3cd4206d28a8895e99965c2964b36)
+        ;
+
+        
+    
+    
+            var marker_1eb94f6cc7cea22773a4beabf8951b09 = L.marker(
+                [41.8781, -87.6298],
+                {}
+            ).addTo(map_c85625ca8bd87106b2c20fdf734d9da5);
+        
+    
+        var popup_ba7ac3abb7c498582809be7a2afd048b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e89b2051c257cb66b6aac65dcd5733ea = $(`<div id="html_e89b2051c257cb66b6aac65dcd5733ea" style="width: 100.0%; height: 100.0%;">Location C<br>Phase: Ovulatory<br>Date: 2024-01-15</div>`)[0];
+                popup_ba7ac3abb7c498582809be7a2afd048b.setContent(html_e89b2051c257cb66b6aac65dcd5733ea);
+            
+        
+
+        marker_1eb94f6cc7cea22773a4beabf8951b09.bindPopup(popup_ba7ac3abb7c498582809be7a2afd048b)
+        ;
+
+        
+    
+    
+            var marker_8ad097b4051902b6901db5e615c42a51 = L.marker(
+                [41.8781, -87.6298],
+                {}
+            ).addTo(map_c85625ca8bd87106b2c20fdf734d9da5);
+        
+    
+        var popup_199deb1dca8b2813ffe1d304aa057c0c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_57ebed9ee6b5bd75f6e2bf5d54f76bd5 = $(`<div id="html_57ebed9ee6b5bd75f6e2bf5d54f76bd5" style="width: 100.0%; height: 100.0%;">Location D<br>Phase: Luteal<br>Date: 2024-01-20</div>`)[0];
+                popup_199deb1dca8b2813ffe1d304aa057c0c.setContent(html_57ebed9ee6b5bd75f6e2bf5d54f76bd5);
+            
+        
+
+        marker_8ad097b4051902b6901db5e615c42a51.bindPopup(popup_199deb1dca8b2813ffe1d304aa057c0c)
+        ;
+
+        
+    
+    
+            var marker_b0b43b4a12234bf65c6474bfe292388b = L.marker(
+                [41.8781, -87.6298],
+                {}
+            ).addTo(map_c85625ca8bd87106b2c20fdf734d9da5);
+        
+    
+        var popup_19c06621bd6e519201cb3e9028f80ee7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b3eccd39c28f66fb5678622a670fa43c = $(`<div id="html_b3eccd39c28f66fb5678622a670fa43c" style="width: 100.0%; height: 100.0%;">Location E<br>Phase: Missed Period<br>Date: 2024-01-25</div>`)[0];
+                popup_19c06621bd6e519201cb3e9028f80ee7.setContent(html_b3eccd39c28f66fb5678622a670fa43c);
+            
+        
+
+        marker_b0b43b4a12234bf65c6474bfe292388b.bindPopup(popup_19c06621bd6e519201cb3e9028f80ee7)
+        ;
+
+        
+    
+    
+            var poly_line_f252310c7d12c703f40f72deec246da6 = L.polyline(
+                [[39.7684, -86.1581], [39.7392, -104.9903], [41.8781, -87.6298], [41.8781, -87.6298], [41.8781, -87.6298]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_c85625ca8bd87106b2c20fdf734d9da5);
+        
+</script>
+</html>

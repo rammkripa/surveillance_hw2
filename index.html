@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crossing Borders: A Hidden Journey</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        iframe {
+            width: 80%;
+            height: 500px;
+            border: none;
+        }
+        .button-container {
+            margin: 20px 0;
+        }
+        .nav-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #description {
+            margin: 20px 0;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Crossing Borders: A Hidden Journey</h1>
+    <p>Using simulated Fitbit location data combined with women's health tracking to tell a story.</p>
+    
+    <div>
+        <iframe id="map" src="journey_map.html"></iframe>
+    </div>
+    
+    <div id="description">
+        <p id="map-description">This map shows the journey of an 18-year-old woman traveling from Indiana to Illinois, indicating the menstrual phases and timestamps.</p>
+    </div>
+
+    <div class="button-container">
+        <button class="nav-button" onclick="previousMap()">Previous</button>
+        <button class="nav-button" onclick="nextMap()">Next</button>
+    </div>
+
+    <script>
+        const totalMaps = 5; // Update this to the number of maps you have
+        let currentMap = 0;
+
+        const descriptions = [
+            "Phase: Menstrual<br>Date: 2024-01-01<br>The journey begins in Indiana. She's experiencing her menstrual cycle.",
+            "Phase: Follicular<br>Date: 2024-01-10<br>The woman is feeling hopeful as she moves forward in her cycle.",
+            "Phase: Ovulatory<br>Date: 2024-01-15<br>In Illinois now, she may be considering her options with this phase of her cycle.",
+            "Phase: Luteal<br>Date: 2024-01-20<br>Continuing to navigate her journey, emotions may be heightened as she faces uncertainty.",
+            "Phase: Missed Period<br>Date: 2024-01-25<br>Indicating that she has missed her period for the last couple of months."
+        ];
+
+        function updateMap() {
+            const iframe = document.getElementById('map');
+            iframe.src = `journey_map.html`;
+            document.getElementById('map-description').innerHTML = descriptions[currentMap];
+        }
+
+        function nextMap() {
+            if (currentMap < totalMaps - 1) {
+                currentMap++;
+                updateMap();
+            }
+        }
+
+        function previousMap() {
+            if (currentMap > 0) {
+                currentMap--;
+                updateMap();
+            }
+        }
+    </script>
+
+</body>
+</html>
+
